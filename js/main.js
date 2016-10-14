@@ -62,3 +62,20 @@ var textES5 = "name: " + name + " age: " + age;
 console.log("\n" + textES5);
 var textES6 = "\n        name: " + name + "\n        age: " + age + "\n";
 console.log("\n" + textES6);
+"use strict";
+
+//Valor padrão no ES5
+function testES5(valueA) {
+    var valueB = arguments.length <= 1 || arguments[1] === undefined ? 4 : arguments[1];
+    return valueA + valueB;
+}
+
+console.log(testES5(1));
+
+//Valor padrão no ES6
+function testES6(valueA) {
+    var valueB = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
+
+    return valueA + valueB;
+}
+console.log(testES6(3));
