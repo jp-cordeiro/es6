@@ -54,3 +54,11 @@ var Color = function () {
 
 var red = new Color("#1234", "Red");
 console.log(red.getColor());
+"use strict";
+
+var name = "Fulano";
+var age = 20;
+var textES5 = "name: " + name + " age: " + age;
+console.log("\n" + textES5);
+var textES6 = "\n        name: " + name + "\n        age: " + age + "\n";
+console.log("\n" + textES6);
