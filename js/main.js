@@ -79,3 +79,38 @@ function testES6(valueA) {
     return valueA + valueB;
 }
 console.log(testES6(3));
+"use strict";
+
+var lista = ["teste", 34, { name: "Fulano" }];
+
+//ES5
+// for(var i in lista){
+//     console.log(lista[i]);
+// }
+
+//ES6
+//O i passa a ser o valor do array e não mais o índice
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+    for (var _iterator = lista[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var i = _step.value;
+
+        console.log(i);
+    }
+} catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+} finally {
+    try {
+        if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+        }
+    } finally {
+        if (_didIteratorError) {
+            throw _iteratorError;
+        }
+    }
+}
