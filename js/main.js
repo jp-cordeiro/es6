@@ -1,10 +1,30 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var bob = {
+    _name: "Fulano",
+    _friends: ["João", "Pedro", "José"],
+    // printFriends: function printFriends() {
+    //     var self = this;
+    //     self._friends.forEach(function (f) {
+    //         return console.log(self._name + " conhece " + f);
+    //     })
+    // }
 
-var Client = function Client(name, email) {
-    _classCallCheck(this, Client);
 
-    this.name = name;
-    this.email = email;
+    //Arrows Functions
+    printFriends: function printFriends() {
+        var _this = this;
+
+        this._friends.forEach(function (f) {
+            return console.log(_this._name + " conhece " + f);
+        });
+    }
 };
+
+bob.printFriends();
+
+var color = function color() {
+    console.log("teste");
+};
+
+color();
