@@ -169,3 +169,4 @@ var Client = function (_Pessoa) {
 
 var client = new Client(1, "Fulano", "a@a.com", "1234-5678");
 console.log(client.toString());
+"use strict";
